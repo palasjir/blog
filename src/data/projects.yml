@@ -1,0 +1,9 @@
+- id: 1
+  title: Volumetric rendering
+  link: https://github.com/palasjir/ct-volumetric-rendering
+  description: Sample application for real time volume rendering of image slices.
+
+- id: 2
+  title: This blog
+  link: https://github.com/palasjir/blog
+  description: This blog, and everything I've used to create it with.

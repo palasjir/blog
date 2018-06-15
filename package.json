@@ -1,0 +1,66 @@
+{
+  "name": "personal-blog-jiri-palas",
+  "description": "Personal Blog - Jiri Palas",
+  "version": "1.0.0",
+  "author": "Jiri Palas <palas.jiri@gmail.com>",
+  "dependencies": {
+    "gatsby": "^1.9.250",
+    "gatsby-link": "^1.6.39",
+    "gatsby-plugin-feed": "^1.3.20",
+    "gatsby-plugin-google-analytics": "^1.0.29",
+    "gatsby-plugin-offline": "^1.0.15",
+    "gatsby-plugin-react-helmet": "^1.0.8",
+    "gatsby-plugin-react-svg": "^1.1.1",
+    "gatsby-plugin-sharp": "^1.6.42",
+    "gatsby-plugin-styled-components": "^2.0.11",
+    "gatsby-plugin-typography": "^1.7.18",
+    "gatsby-remark-copy-linked-files": "^1.5.31",
+    "gatsby-remark-images": "^1.5.61",
+    "gatsby-remark-prismjs": "^1.2.24",
+    "gatsby-remark-responsive-iframe": "^1.4.18",
+    "gatsby-remark-smartypants": "^1.4.12",
+    "gatsby-source-filesystem": "^1.5.31",
+    "gatsby-transformer-remark": "^1.7.40",
+    "gatsby-transformer-sharp": "^1.6.22",
+    "lodash": "^4.17.5",
+    "prismjs": "^1.14.0",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "styled-components": "^3.3.2",
+    "styled-normalize": "^4.0.0",
+    "typeface-merriweather": "0.0.43",
+    "typeface-montserrat": "0.0.43",
+    "typography-theme-wordpress-2016": "^0.15.10"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.5",
+    "eslint": "^4.19.1",
+    "eslint-plugin-react": "^7.7.0",
+    "gh-pages": "^1.1.0",
+    "husky": "^0.14.3",
+    "prettier": "^1.12.0"
+  },
+  "homepage": "https://jiripalas.com",
+  "keywords": [
+    "jiri",
+    "palas"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/palasjir/blog.git"
+  },
+  "scripts": {
+    "dev": "gatsby develop",
+    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
+    "pretest": "yarn run fix-semi && yarn run format && yarn run lint",
+    "test": "exit 0",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js",
+    "precommit": "yarn run test"
+  }
+}
