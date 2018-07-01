@@ -41,10 +41,10 @@ Navigate to `Click on profile picture > Settings > Add SHH Key` and paste you li
 
 If you have a real domain available use that as your hostname.
 Select the dokku app from the list of applications.
-![create-droplet](create-droplet.png)
-![create-droplet2](create-droplet2.png)
-![create-droplet3](create-droplet3.png)
-![create-droplet4](create-droplet4.png)
+![create-droplet](./create-droplet.png)
+![create-droplet2](./create-droplet2.png)
+![create-droplet3](./create-droplet3.png)
+![create-droplet4](./create-droplet4.png)
 
 Add your SSH key and create the droplet.
 
@@ -67,7 +67,7 @@ Navigate to domain you've setup in the previous step
 
 _Note: If did setup DNS record recently it may take some time to propagate changes._
 
-![dokku-setup](dokku-setup.png)
+![dokku-setup](./dokku-setup.png)
 
 Check option "Use virtualhost naming for apps". It will allow you to access apps in the following manner.
 

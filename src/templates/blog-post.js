@@ -77,20 +77,22 @@ class BlogPostTemplate extends React.Component {
     }
 
     return (
-      <SitePage forReading>
-        <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
-        <PageSection>
-          <BlogPostHeader>
-            <h1>{post.frontmatter.title}</h1>
-            <PostTime dateTime={post.frontmatter.fullDate}>
-              {post.frontmatter.date}
-            </PostTime>
-          </BlogPostHeader>
-          <BlogPostBody dangerouslySetInnerHTML={{ __html: post.html }} />
-        </PageSection>
-        <BlogPostFooter next={next} prev={prev} />
-        <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
-      </SitePage>
+      <div>
+        <SitePage forReading>
+          <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
+          <PageSection>
+            <BlogPostHeader>
+              <h1>{post.frontmatter.title}</h1>
+              <PostTime dateTime={post.frontmatter.fullDate}>
+                {post.frontmatter.date}
+              </PostTime>
+            </BlogPostHeader>
+            <BlogPostBody dangerouslySetInnerHTML={{ __html: post.html }} />
+          </PageSection>
+          <BlogPostFooter next={next} prev={prev} />
+          <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+        </SitePage>
+      </div>
     )
   }
 }
