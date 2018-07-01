@@ -8,9 +8,9 @@ import SitePage from '../components/Site/SitePage'
 import PageSection from '../components/Page/PageSection'
 import 'prismjs/themes/prism-tomorrow.css'
 import PostTime from '../components/Posts/PostTime'
-import { DiscussionEmbed } from "disqus-react";
+import { DiscussionEmbed } from 'disqus-react'
 
-const disqusShortname = "jiripalas";
+const disqusShortname = 'jiripalas'
 
 const BlogPostHeader = styled.div`
   h1,
@@ -74,7 +74,7 @@ class BlogPostTemplate extends React.Component {
     const disqusConfig = {
       identifier: post.id,
       title: post.frontmatter.title,
-    };
+    }
 
     return (
       <SitePage forReading>
