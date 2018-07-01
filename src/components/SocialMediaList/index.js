@@ -61,7 +61,7 @@ SocialMedia.Item = styled(({ className, children, link, title }) => {
   }
 `
 
-const Index = () => (
+const SocialMediaList = () => (
   <SocialMedia.Wrapper>
     <Separator />
     <SocialMedia.List>
@@ -74,7 +74,7 @@ const Index = () => (
       <SocialMedia.Item link="//linkedin.com/in/palasjir" title="Linkedin">
         <LinkedinSvg />
       </SocialMedia.Item>
-      <SocialMedia.Item link="/feed.xml" title="Rss">
+      <SocialMedia.Item link="/rss.xml" title="Rss">
         <RssSvg />
       </SocialMedia.Item>
     </SocialMedia.List>
@@ -82,4 +82,4 @@ const Index = () => (
   </SocialMedia.Wrapper>
 )
 
-export default Index
+export default SocialMediaList

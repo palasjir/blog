@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Index from '../SocialMediaList/index'
+import SocialMediaList from '../SocialMediaList/index'
 import SiteTitle from './SiteTitle'
 import SiteNavigation from './SiteNavigation'
 
@@ -20,6 +20,6 @@ export default ({ siteTitle }) => (
   <Wrapper>
     <SiteTitle title={siteTitle} />
     <SiteNavigation />
-    <Index />
+    <SocialMediaList />
   </Wrapper>
 )
