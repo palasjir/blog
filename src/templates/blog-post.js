@@ -8,6 +8,9 @@ import SitePage from '../components/Site/SitePage'
 import PageSection from '../components/Page/PageSection'
 import 'prismjs/themes/prism-tomorrow.css'
 import PostTime from '../components/Posts/PostTime'
+import { DiscussionEmbed } from "disqus-react";
+
+const disqusShortname = "jiripalas";
 
 const BlogPostHeader = styled.div`
   h1,
@@ -68,6 +71,11 @@ class BlogPostTemplate extends React.Component {
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
     const { previous: prev, next } = this.props.pathContext
 
+    const disqusConfig = {
+      identifier: post.id,
+      title: post.frontmatter.title,
+    };
+
     return (
       <SitePage forReading>
         <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
@@ -81,6 +89,7 @@ class BlogPostTemplate extends React.Component {
           <BlogPostBody dangerouslySetInnerHTML={{ __html: post.html }} />
         </PageSection>
         <BlogPostFooter next={next} prev={prev} />
+        <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
       </SitePage>
     )
   }
