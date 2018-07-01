@@ -73,7 +73,7 @@ class BlogPostTemplate extends React.Component {
         <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
         <PageSection>
           <BlogPostHeader>
-            <h2>{post.frontmatter.title}</h2>
+            <h1>{post.frontmatter.title}</h1>
             <PostTime dateTime={post.frontmatter.fullDate}>
               {post.frontmatter.date}
             </PostTime>
